@@ -6,5 +6,5 @@ of other things instead!
 Notes:
 * installation: add this script to `/usr/local/bin`
 * usage:
-** use `pants` just like that, instead of a path to a pants installation
-** all paths should be prefixed with `./`. That's how we're figuring out which arguments to expand
+    * use `pants` just like that, instead of a path to a pants installation
+    * all paths should be prefixed with `./`. That's how we're figuring out which arguments to expand
