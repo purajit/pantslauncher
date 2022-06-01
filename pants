@@ -1,0 +1,25 @@
+#!/bin/sh
+
+cur_dir="($pwd)"
+
+while [ "$cur_dir" != "$HOME" ]; do
+    if [[ -x "$cur_dir"/pants ]]; then
+        i=0
+        new_args=()
+        for arg in "$@"; do
+            new_arg="$arg"
+            if [[ $arg == .* ]]; then
+                new_arg=$(realpath "$arg")
+            fi
+            new_args[$i]="$new_arg"
+            ((++i))
+        done
+        pushd $cur_dir
+        ./pants "${new_args[@]}"
+        code=$?
+        popd
+        exit $code
+    fi
+
+    cur_dir=$(dirname $cur_dir)
+done
