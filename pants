@@ -1,6 +1,5 @@
 #!/bin/sh
-
-cur_dir="($pwd)"
+cur_dir="$(pwd)"
 
 while [ "$cur_dir" != "$HOME" ]; do
     if [[ -x "$cur_dir"/pants ]]; then
