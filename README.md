@@ -1,3 +1,5 @@
+# With the release of [scie-pants]([url](https://github.com/pantsbuild/scie-pants)), this should no longer be used
+
 # Why did you do this
 
 Tired of always running pants commands from the root of your project?
